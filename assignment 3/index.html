@@ -14,11 +14,11 @@
             justify-content: center;
             align-items: center;
             background-image: url('https://cdn.wallpapersafari.com/23/79/tQ0h9r.jpg');
-            background-size: cover; /* Ensures the background image covers the entire viewport */
-            background-repeat: no-repeat; /* Prevents the background from repeating */
-            background-position: center; /* Centers the background image */
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
             font-family: Arial, sans-serif;
-            overflow: hidden; /* Prevents overflow issues */
+            overflow: hidden; 
         }
 
         #wrapper {
@@ -29,7 +29,7 @@
         #container {
             width: 400px;
             height: 250px;
-            background-color: #F187D8; /* Initial color */
+            background-color: #F187D8;
             color: black;
             display: flex;
             justify-content: center;
@@ -83,13 +83,13 @@
 
     toggleButton.addEventListener('click', function() {
         if (!isToggled) {
-            container.style.backgroundColor = '#151060'; // Dark blue color
+            container.style.backgroundColor = '#151060'; 
             containerText.textContent = 'This is my third assignment. Check out how the content and style changes on a simple button click!';
             toggleButton.textContent = 'Go Back';
             container.style.color = 'white';
             container.style.transform = 'scale(1.05)';
         } else {
-            container.style.backgroundColor = '#F187D8'; // Light pink color
+            container.style.backgroundColor = '#F187D8'; 
             containerText.textContent = 'Hello, I\'m Mokshagna, a CSE student passionate about creating interactive web experiences. Explore this demo to see how a simple click can transform the content!';
             toggleButton.textContent = 'Click Me';
             container.style.color = 'black';
