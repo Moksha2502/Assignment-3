@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cdn.wallpapersafari.com/23/79/tQ0h9r.jpg');
+            background-size: cover; /* Ensures the background image covers the entire viewport */
+            background-repeat: no-repeat; /* Prevents the background from repeating */
+            background-position: center; /* Centers the background image */
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevents overflow issues */
+        }
+
+        #wrapper {
+            text-align: center;
+            position: relative;
+        }
+
+        #container {
+            width: 400px;
+            height: 250px;
+            background-color: #F187D8; /* Initial color */
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        #toggleButton {
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #toggleButton:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #toggleButton:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="container">
+        <p id="containerText">Hello, I'm Mokshagna, a CSE student passionate about creating interactive web experiences. Explore this demo to see how a simple click can transform the content!</p>
+    </div>
+    <button id="toggleButton">Click Me</button>
+</div>
+
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    const container = document.getElementById('container');
+    const containerText = document.getElementById('containerText');
+
+    let isToggled = false;
+
+    toggleButton.addEventListener('click', function() {
+        if (!isToggled) {
+            container.style.backgroundColor = '#151060'; // Dark blue color
+            containerText.textContent = 'This is my third assignment. Check out how the content and style changes on a simple button click!';
+            toggleButton.textContent = 'Go Back';
+            container.style.color = 'white';
+            container.style.transform = 'scale(1.05)';
+        } else {
+            container.style.backgroundColor = '#F187D8'; // Light pink color
+            containerText.textContent = 'Hello, I\'m Mokshagna, a CSE student passionate about creating interactive web experiences. Explore this demo to see how a simple click can transform the content!';
+            toggleButton.textContent = 'Click Me';
+            container.style.color = 'black';
+            container.style.transform = 'scale(1)';
+        }
+        isToggled = !isToggled;
+    });
+</script>
+
+</body>
+</html>
